@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;width: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingredients Selection Tree</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- build:css css/style.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- /build -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?38e6ab752780049ff203d784841053df";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body data-ng-controller="questionaireController" id="questionaire-body">
+<!-- Header -->
+<header class="ng-cloak questionaire-header">
+    <h2 ng-if="yoghurtType == 'DRINKING'">Major Attributes of the Drinking Yoghurt</h2>
+
+    <h2 ng-if="yoghurtType == 'HIGH_PROTEIN'">Major Attributes of the High Protein/Greek Style Yoghurt</h2>
+
+    <h2 ng-if="yoghurtType == 'POT_SET'">Major Attributes of the Pot Set Yoghurt</h2>
+
+    <h2 ng-if="yoghurtType == 'STIRRED'">Major Attributes of the Stirred or Smoothed Yoghurt</h2>
+    <img class="logo" src="img/common/logo.svg" style="top: 30px;">
+</header>
+
+<!-- Questions -->
+<div class="mainPanel">
+    <div data-ng-view></div>
+</div>
+
+<!-- Arrow button  -->
+<div style="text-align: center;width:100%;">
+    <a href="type.html" class="arrowButton" id="leftButton"></a>
+    <a class="arrowButton" id="rightButton" ng-click="saveAndGo()"></a>
+</div>
+
+<!-- build:js js/questionaire.min.js -->
+<script data-main="js/app/questionaire/main.js" src="js/lib/require.js"></script>
+<!-- /build -->
+</body>
+</html>

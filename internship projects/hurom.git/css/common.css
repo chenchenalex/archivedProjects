@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    min-height: 500px;
+}
+
+.front-layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    min-height: 500px;
+}
+
+.femina-icon {
+    position: absolute;
+    height: 50px;
+    padding: 10px 20px;
+}
+
+.femina-icon img {
+    height: 100%;
+}
+
+.breath {
+    -webkit-animation-name: breath;
+    -ms-animation-name: breath;
+    animation-name: breath;
+    -webkit-animation-duration: 1.5s;
+    -ms-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -ms-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-play-state: running;
+    -ms-animation-play-state: running;
+    animation-play-state: running;
+    display: inline-block;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.breath-blink {
+    -webkit-animation-name: breath-blink;
+    -ms-animation-name: breath-blink;
+    animation-name: breath-blink;
+    -webkit-animation-duration: 1.5s;
+    -ms-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -ms-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-play-state: running;
+    -ms-animation-play-state: running;
+    animation-play-state: running;
+    display: inline-block;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+}
+
+@-webkit-keyframes breath-blink {
+    0% {
+        opacity: 0.3
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0.3
+    }
+}
+
+@-ms-keyframes breath-blink {
+    0% {
+        opacity: 0.3
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0.3
+    }
+}
+
+@keyframes breath-blink {
+    0% {
+        opacity: 0.3
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0.3
+    }
+}
+
+
+@-webkit-keyframes breath {
+    0% {
+        -webkit-transform: scale(0.9)
+    }
+    50% {
+        -webkit-transform: scale(1)
+    }
+    100% {
+        -webkit-transform: scale(0.9)
+    }
+}
+
+@-ms-keyframes breath {
+    0% {
+        -ms-transform: scale(0.9)
+    }
+    50% {
+        -ms-transform: scale(1)
+    }
+    100% {
+        -ms-transform: scale(0.9)
+    }
+}
+
+@keyframes breath {
+    0% {
+        transform: scale(0.9)
+    }
+    50% {
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(0.9)
+    }
+}

@@ -1,0 +1,105 @@
+.title-layer {
+    height: 200px;
+    padding-top: 20px;
+}
+
+.title-layer .title-text {
+    height: 175px;
+    position: absolute;
+    left: 50%;
+    margin-left: -118px;
+}
+
+.title-layer .text-one {
+    position: absolute;
+    height: 39px;
+    top: 94px;
+    left: 50%;
+    margin-left: -63px;
+}
+
+.fruit-layer {
+    margin-top: -8%;
+}
+
+.fruit-layer img {
+    position: absolute;
+}
+
+.fruit {
+
+}
+
+.active {
+    transition:All 0.4s ease-in-out;
+    -webkit-transition:All 0.4s ease-in-out;
+    -moz-transition:All 0.4s ease-in-out;
+    -o-transition:All 0.4s ease-in-out;
+    transform:scale(1.1);
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+}
+
+.shake {
+    -webkit-animation-name: shake-left-right;
+    -ms-animation-name: shake-left-right;
+    animation-name: shake-left-right;
+    -webkit-animation-duration: 1s;
+    -ms-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -ms-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-delay: 0s;
+    -ms-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-play-state: running;
+    -ms-animation-play-state: running;
+    animation-play-state: running;
+    display: inline-block;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+}
+
+@-webkit-keyframes shake-left-right {
+    0% {
+        -webkit-transform: translate(0px, 0px) rotate(-3deg)
+    }
+    50% {
+        -webkit-transform: translate(0px, 0px) rotate(3deg)
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px) rotate(-3deg)
+    }
+}
+
+@-ms-keyframes shake-left-right {
+    0% {
+        -webkit-transform: translate(0px, 0px) rotate(-3deg)
+    }
+    50% {
+        -webkit-transform: translate(0px, 0px) rotate(3deg)
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px) rotate(-3deg)
+    }
+}
+
+@keyframes shake-left-right {
+    0% {
+        -webkit-transform: translate(0px, 0px) rotate(-3deg)
+    }
+    50% {
+        -webkit-transform: translate(0px, 0px) rotate(3deg)
+    }
+    100% {
+        -webkit-transform: translate(0px, 0px) rotate(-3deg)
+    }
+}
+

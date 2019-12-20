@@ -1,0 +1,119 @@
+.width-100 {
+    width: 100%;
+}
+
+.width-60 {
+    width: 60%;
+}
+
+#zhazhiji {
+    position: fixed;
+    bottom: -5%;
+    width: 47%;
+    height: 80%;
+    right: 10%;
+}
+
+#zhazhiji .component {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+}
+
+#fruit-container {
+    position: absolute;
+    bottom: 20%;
+    width: 30%;
+    height: 45%;
+    /* margin: 35% 5%; */
+    left: 5%;
+}
+
+#fruit-container .fruit {
+    width: 100%;
+    padding: 0;
+    height: 30%;
+    text-align: center;
+}
+
+.change-fruit-container {
+    height: 12%;
+    margin-top: 15%;
+}
+
+.change-fruit-container img {
+    height: 100%;
+}
+
+#fruit-container .fruit img {
+    /* height: 90%; */
+    width: 100%;
+}
+
+.static-bottom .message {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    margin-right: 45%;
+    top: 15%;
+}
+
+.drag-hint {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#drag-hint-1 {
+    margin-right: 27%;
+    bottom: 74%;
+    width: 15%;
+}
+
+#drag-hint-2 {
+    width: 5%;
+    margin-right: 20%;
+    bottom: 76%;
+}
+
+#drag-hint-3 {
+    margin-right: 30%;
+    bottom: 64%;
+    width: 50%;
+}
+
+#drag-hint-4 {
+    width: 44%;
+    bottom: 69%;
+    margin-right: 52%;
+}
+
+img.finish {
+    position: absolute;
+    margin-left: 12%;
+    bottom: 20%;
+    width: 71px;
+}
+
+img.finish.finish-text {
+    padding: 27px 13px;
+    width: 45px;
+}
+
+.droppable-zone {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    top: -20%;
+}
+
+#finish-step {
+    position: absolute;width: 100%;
+    height: 100%;
+}
+
+#juice-component {
+    -webkit-transition: all 3s;
+    transition: all 3s;
+}

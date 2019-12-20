@@ -1,0 +1,36 @@
+<img src="image/finish/share_300.jpg" style="position: absolute; opacity: 0;">
+<img class="background" src="image/share/background.jpg">
+
+<div class="front-layer" ng-controller="shareController">
+    <div class="share-page content">
+        <img class="text-frame" src="image/share/textframe.png">
+        <div class="greeting-words ng-cloak">
+            <div class="to">
+                <input ng-readonly="isShared" ng-model="message.to" class="text-editor-to transparent" maxlength="12" placeholder="输入TA的名字">
+            </div>
+            <div class="body">
+                <div class="love-image">
+                    <img class="breath-blink" ng-if="!isShared" id="left-arrow" ng-click="nextMessage()" src="image/share/left.gif">
+                    <img class="breath-blink" ng-if="!isShared" id="right-arrow" ng-click="preMessage()" src="image/share/right.gif">
+                </div>
+                <div class="text" ng-swipe-left="nextMessage()" ng-swipe-right="preMessage()">
+                    <textarea ng-readonly="isShared" ng-model="message.body" rows="3" class="text-editor transparent"></textarea>
+                </div>
+                <div class="right-arrow"></div>
+            </div>
+            <div class="from">
+                <input ng-readonly="isShared" ng-model="message.from" class="text-editor-from transparent" maxlength="12" placeholder="输入你的名字">
+            </div>
+        </div>
+    </div>
+    <div class="fruit-juice">
+        <img ng-src="{{'image/share/cup-' + fruit + '-7.png'}}">
+    </div>
+    <img ng-if="!isShared" class="share-page share-him ng-cloak" ng-click="shareHim()" src="image/finish/share-him.png">
+    <img ng-if="isShared" class="share-page share-him ng-cloak" ng-click="tryAgain()" src="image/share/i-wanna-try.gif">
+
+    <div id="shade" ng-click="hideShareHint()" style="display:none;">
+        <div class="shade-cover"></div>
+        <img id="share-hint-cover" src="image/share/share-hint.gif">
+    </div>
+</div>

@@ -1,0 +1,42 @@
+#timetable table.CourseFormTable {
+	border: 1px solid rgb(227, 227, 227);
+	text-align: center;
+	width: 100%;
+}
+#timetable td,
+#timetable th {
+	border: 1px solid rgb(227, 227, 227);
+	padding: 2px;
+	font-size: 12px;
+	word-break: break-word;
+}
+#timetable th {
+	width: 13%;
+	text-align: center;
+	padding: 0;
+}
+#timetable td {
+
+}
+@media (max-width: 340px) {
+	#timetable td,
+	#timetable th {
+		font-size: 11px;
+	}
+}
+@media (min-width: 640px) {
+	#timetable td,
+	#timetable th {
+		font-size: 14px;
+	
+		padding: 4px;
+}
+}
+#timetable .firstHiddenTd {
+	width: 0;
+	display: none;
+}
+#timetable th:nth-child(2){
+	width: 5%;
+	color: white;
+}

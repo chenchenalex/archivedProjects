@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingredients Selection Tree</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- build:css css/style.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- /build -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?38e6ab752780049ff203d784841053df";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body id="recomm">
+<div id="container" ng-controller="recommController">
+    <header>
+        <img class="arrow-back hide-on-print" data-ng-click="back()"  src="img/common/left.svg"/>
+        <img id="header-img" src="img/recomm/powder_960.jpg"/>
+
+        <p class="productname ng-cloak" ng-if="yoghurtType == 'DRINKING'">Drinking Yoghurt</p>
+
+        <p class="productname ng-cloak" ng-if="yoghurtType == 'HIGH_PROTEIN'">High Protein/Greek Style Yoghurt</p>
+
+        <p class="productname ng-cloak" ng-if="yoghurtType == 'POT_SET'">Pot Set Yoghurt</p>
+
+        <p class="productname ng-cloak" ng-if="yoghurtType == 'STIRRED'">Stirred or Smoothed Yoghurt</p>
+        <img id="recommendation-logo" src="img/common/logo.svg">
+
+        <div class="printGroup hide-on-print">
+            <img class="print" ng-click="exportPdf()" src="img/recomm/pdf.svg">
+            <img class="print" ng-click="printOut()" src="img/recomm/print.svg">
+
+            <div id="tagGroup" class="btn-group" role="group" aria-label="..." style="display: none;">
+                <button ng-click="toInternal()" type="button" class="btn btn-default">Internal</button>
+                <button ng-click="toExternal()" type="button" class="btn btn-default">External</button>
+            </div>
+        </div>
+    </header>
+    <div id="recommContent">
+        <div>
+            <div class="wraptitle"><img src="img/recomm/features.png"></img></div>
+            <div class="row">
+                <div ng-repeat="i in [0,1,2,3]" class="col-sm-3 ng-cloak">
+                    <p class="sub">{{questions[i].caption}}</p>
+
+                    <p>{{questions[i].selectedValuesStr || "Not Sure"}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="wraptitle"><img src="img/recomm/attributes.png"></img></div>
+            <div class="row">
+                <p class="descrip col-sm-9 ng-cloak">
+                    Your new product is a {{questions[2].selectedValuesStr | lowercase}} sugar,
+                    {{questions[1].selectedValuesStr | lowercase}} stirred yoghurt made with fresh milk and uses
+                    Fonterra’s NZMP protein ingredients to deliver {{questions[5].selectedValuesStr | lowercase}}
+                    and {{questions[6].selectedValuesStr | lowercase}} tailored to meet yours and your consumers taste
+                    and texture requirements.
+                </p>
+                <div class="description-pic col-sm-3 ng-cloak" ng-if="yoghurtType == 'DRINKING'"><img src="img/recomm/drinking.jpg"></img></div>
+                <div class="description-pic col-sm-3 ng-cloak" ng-if="yoghurtType == 'HIGH_PROTEIN'"><img src="img/recomm/greekstyle.jpg"></img></div>
+                <div class="description-pic col-sm-3 ng-cloak" ng-if="yoghurtType == 'POT_SET'"><img src="img/recomm/potset.jpg"></img></div>
+                <div class="description-pic col-sm-3 ng-cloak" ng-if="yoghurtType == 'STIRRED'"><img src="img/recomm/stirred.jpg"></img></div>
+            </div>
+        </div>
+
+
+        <div>
+            <div class="wraptitle"><img src="img/recomm/ingredients.png"></img></div>
+            <div ng-if="output.length == 0" class="well ng-cloak">No ingredients related to the given selection.</div>
+            <div class="row descrip-b" ng-repeat="product in output">
+                <div class="col-sm-8">
+                    <div ng-bind-html="product.richCaption" on-render-finish="initPopover" class="sub"></div>
+                    <h4>Description</h4>
+
+                    <p class="descrip ng-cloak" ng-bind-html="product.description"></p>
+                </div>
+                <div class="benefits col-sm-4">
+                    <span class="span-header">Benefits:</span>
+                    <ul class="benefit-li">
+                        <li ng-repeat="proposition in product.displayPropositions">
+                            <div class="pull-left"><img src="img/recomm/arrow.svg" class="tag"/></div>
+                            <div class="benefit-content">{{proposition.caption}}</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="pagebreak"></div>
+            <div class="wraptitle"><img src="img/recomm/process.png"></img></div>
+            <img src="img/recomm/selection-tree.png" class="selection-tree">
+        </div>
+    </div>
+</div>
+
+<!-- build:js js/recomm.min.js -->
+<script data-main="js/app/recomm/main.js" src="js/lib/require.js"></script>
+<!-- /build -->
+
+<div id="popover-content" style="display: none;">
+    <ul class="dropdown-menu in-popover">
+        <li role="presentation"><a role="menuitem" tabindex="-1" class="bulletin" target="_blank">Product Bulletin</a>
+        </li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" class="ss" target="_blank">Selling Specification <span class="warning">(Internal Only)</span></a></li>
+    </ul>
+</div>
+</body>
+</html>

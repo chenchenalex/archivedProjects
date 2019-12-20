@@ -1,0 +1,152 @@
+<div class="topPanel" ng-init="yoghurtType = 'POT_SET'">
+    <span id="make-questions-bottom"></span>
+    <div id="question-1" class="question">
+        <label>
+            <input type="checkbox" data-ng-model="notSure[0]" data-ng-disabled="notSureDisabled[0]"/>
+
+            <div class="checkbox"></div>
+            Not Sure
+        </label>
+        <label data-ng-repeat="option in questions[0].options">
+            <input type="checkbox" data-ng-model="answer[option.featureId - 1]"
+                   data-ng-disabled="disabled[option.featureId - 1]"/>
+
+            <div class="checkbox"></div>
+            {{option.caption}}
+        </label>
+
+        <h3>{{questions[0].caption}}</h3>
+        <img class="leaf" src="img/questionaire/leaf-right.svg">
+    </div>
+
+    <div id="question-2" class="question">
+        <label style="display: none;">
+            <input type="checkbox" data-ng-model="notSure[1]" data-ng-disabled="notSureDisabled[1]"/>
+
+            <div class="checkbox"></div>
+            Not Sure
+        </label>
+        <label data-ng-repeat="option in questions[1].options">
+            <input type="checkbox" data-ng-model="answer[option.featureId - 1]"
+                   data-ng-disabled="disabled[option.featureId - 1]"/>
+
+            <div class="checkbox"></div>
+            {{option.caption}}
+        </label>
+
+        <h3>{{questions[1].caption}}</h3>
+        <img class="leaf" src="img/questionaire/leaf-left.svg">
+    </div>
+
+    <div id="question-3" class="question">
+        <label style="display: none;">
+            <input type="checkbox" data-ng-model="notSure[2]" data-ng-disabled="notSureDisabled[2]"/>
+
+            <div class="checkbox"></div>
+            Not Sure
+        </label>
+        <label data-ng-repeat="option in questions[2].options">
+            <input type="checkbox" data-ng-model="answer[option.featureId - 1]"
+                   data-ng-disabled="disabled[option.featureId - 1]"/>
+
+            <div class="checkbox"></div>
+            {{option.caption}}
+        </label>
+
+        <h3>{{questions[2].caption}}</h3>
+        <img class="leaf" src="img/questionaire/leaf-right.svg">
+    </div>
+    <div id="question-4" class="question">
+        <label>
+            <input type="checkbox" data-ng-model="notSure[3]" data-ng-disabled="notSureDisabled[3]"/>
+
+            <div class="checkbox"></div>
+            Not Sure
+        </label>
+        <label data-ng-repeat="option in questions[3].options">
+            <input type="checkbox" data-ng-model="answer[option.featureId - 1]"
+                   data-ng-disabled="disabled[option.featureId - 1]"/>
+
+            <div class="checkbox"></div>
+            {{option.caption}}
+        </label>
+
+        <h3>{{questions[3].caption}}</h3>
+        <img class="leaf" src="img/questionaire/leaf-left.svg">
+    </div>
+</div>
+<div class="hl"></div>
+<div class="bottomPanel">
+    <div id="question-5" class="question">
+        <img class="leaf" src="img/questionaire/leaf-left.svg">
+
+        <h3>{{questions[4].caption}}</h3>
+        <label>
+            <input type="checkbox" data-ng-model="notSure[4]" data-ng-disabled="notSureDisabled[4]"/>
+
+            <div class="checkbox"></div>
+            Not Sure
+        </label>
+        <label data-ng-repeat="option in questions[4].options">
+            <input type="checkbox" data-ng-model="answer[option.featureId - 1]"
+                   data-ng-disabled="disabled[option.featureId - 1]"/>
+
+            <div class="checkbox"></div>
+            {{option.caption}}
+        </label>
+    </div>
+    <div id="question-6" class="question">
+        <img class="leaf" src="img/questionaire/leaf-right.svg">
+
+        <h3>{{questions[5].caption}}</h3>
+        <label style="display: none;">
+            <input type="checkbox" data-ng-model="notSure[5]" data-ng-disabled="notSureDisabled[5]"/>
+
+            <div class="checkbox"></div>
+            Not Sure
+        </label>
+        <label data-ng-repeat="option in questions[5].options">
+            <input type="checkbox" data-ng-model="answer[option.featureId - 1]"
+                   data-ng-disabled="disabled[option.featureId - 1]"/>
+
+            <div class="checkbox"></div>
+            {{option.caption}}
+        </label>
+    </div>
+    <div id="question-7" class="question">
+        <img class="leaf" src="img/questionaire/leaf-left.svg">
+
+        <h3>{{questions[6].caption}}</h3>
+        <label style="display: none;">
+            <input type="checkbox" data-ng-model="notSure[6]" data-ng-disabled="notSureDisabled[6]"/>
+
+            <div class="checkbox"></div>
+            Not Sure
+        </label>
+        <label data-ng-repeat="option in questions[6].options">
+            <input type="checkbox" data-ng-model="answer[option.featureId - 1]"
+                   data-ng-disabled="disabled[option.featureId - 1]"/>
+
+            <div class="checkbox"></div>
+            {{option.caption}}
+        </label>
+    </div>
+    <div id="question-8" class="question">
+        <img class="leaf" src="img/questionaire/leaf-right.svg">
+
+        <h3>{{questions[7].caption}}</h3>
+        <label>
+            <input type="checkbox" data-ng-model="notSure[7]" data-ng-disabled="notSureDisabled[7]"/>
+
+            <div class="checkbox"></div>
+            Not Sure
+        </label>
+        <label data-ng-repeat="option in questions[7].options">
+            <input type="checkbox" data-ng-model="answer[option.featureId - 1]"
+                   data-ng-disabled="disabled[option.featureId - 1]"/>
+
+            <div class="checkbox"></div>
+            {{option.caption}}
+        </label>
+    </div>
+</div>

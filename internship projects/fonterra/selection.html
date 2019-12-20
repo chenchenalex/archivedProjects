@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingredients Selection Tree</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- build:css css/style.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- /build -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?38e6ab752780049ff203d784841053df";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+
+<div data-ng-controller="indexController" data-ng-init="init()" style="height: 100%;">
+    <!-- Header -->
+    <header>
+        <h1>Ingredients Selection Tree</h1>
+
+        <div style="display:none;" id="pleaseChoose">Please choose one type:</div>
+        <img class="logo" src="img/common/logo.svg">
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <a href="index.html"><img class="arrow-back" src="img/index/arrow1.png"></a>
+    </footer>
+
+    <!-- After clicking "Go" -->
+    <img class="trapezoid" id="trapezoid-1" src="img/index/trapezoid-1.png" style="left: 43%; z-index: 0;">
+
+    <div id="hugeBlock" style="left: 0px;"></div>
+    <div style="display:none" id="selectionArea">
+        <div class="selection-content">
+            <img src="img/index/selection1.png">
+            <img class="type" style="left: -5px;" src="img/index/selection2.png" ng-click="leftPanelShow()">
+            <img src="img/index/selection3.png" style="left: -27px;">
+            <img style="left:-70px; " src="img/index/selection4.png">
+        </div>
+    </div>
+
+    <!-- build:js js/index.min.js -->
+    <script data-main="js/app/index/main.js" src="js/lib/require.js"></script>
+    <!-- /build -->
+</div>
+</body>
+</html>
+

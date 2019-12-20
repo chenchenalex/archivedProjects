@@ -1,0 +1,120 @@
+.finish-content {
+    width: 94%;
+    margin: 20% 3% 0 3%;
+}
+
+.hurom-finish {
+    position: absolute;
+    bottom: 0;
+    height: 37%;
+    right: 15%;
+}
+
+.share-him {
+    position: absolute;
+    bottom: 17%;
+    width: 33%;
+    left: 10%;
+}
+
+.try-again {
+    position: absolute;
+    bottom: 9%;
+    width: 33%;
+    left: 10%;
+}
+
+.front-layer .content {
+    height: 49%;
+    width: 84%;
+    top: 14%;
+    left: 8%;
+    position: absolute;
+}
+
+.front-layer .content .title {
+    height: 8%;
+    padding: 8% 5% 6% 5%;
+}
+
+.front-layer .content .title img {
+    height: 23px;
+}
+
+.front-layer .content .cup {
+    float: right;
+    width: 50%;
+    text-align: center;
+    height: 67%;
+    margin-top: -7%;
+}
+
+.front-layer .content .cup img {
+    width: 100%;
+    -webkit-box-reflect: below -18% -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.4)))
+}
+
+.front-layer .content .fruit {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.front-layer .content .fruit img {
+    width: 65%;
+    margin: 0 10% 0 30%;
+}
+
+.front-layer .content .text {
+    position: absolute;
+    width: 50%;
+}
+
+.front-layer .content .text img {
+    width: 90%;
+    padding-left: 10%;
+}
+
+.front-layer .share-info {
+    height: 35%;
+    width: 45%;
+    top: 60%;
+    left: 15%;
+    position: absolute;
+}
+
+.front-layer .share-info .text {
+}
+
+.front-layer .share-info .text img {
+    width: 100%;
+}
+
+.front-layer .share-info .share-button {
+    position: absolute;
+    bottom: 10%;
+    margin-bottom: 10%;
+}
+
+.front-layer .share-info .share-button img {
+    width: 75%;
+}
+
+.front-layer .share-info .try-again {
+    position: absolute;
+    bottom: 0;
+}
+
+.front-layer .share-info .try-again img {
+    width: 60%;
+}
+
+.front-layer .share-info .i-wanna-try {
+    position: absolute;
+    bottom: 22%;
+}
+
+.front-layer .share-info .i-wanna-try img {
+    width: 71%;
+}

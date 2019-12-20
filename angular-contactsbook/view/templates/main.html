@@ -1,0 +1,48 @@
+<div id="left-panel">
+    <div class="searchPanel">
+        <div class="form-group">
+            <input type="text" class="searchBox form-control" ng-model="main.keywords" placeholder="please enter names">
+        </div>
+        <div class="searchCandidates">
+            <select class="form-control" multiple>
+                <option ng-repeat="item in main.contacts | filter: main.keywords">
+                    {{item.name}}
+                </option>
+            </select>
+        </div>
+    </div>
+</div>
+<div id="right-panel">
+    <div class="details">
+        <fieldset>
+            <legend>General details</legend>
+                <div class="form-group form-inline">
+                    <label for="">
+                        <strong>Name:</strong>
+                        <input type="text" class="name form-control">
+                    </label>
+                </div>
+                <div class="form-group form-inline">
+                    <label for="">
+                        <strong>Age:</strong>
+                        <input type="text" class="form-control wt50" maxlength="2">
+                    </label>
+                </div>
+                <div class="form-group form-inline radio-group">
+                    <strong>Gender:</strong>
+                    <label>
+                        Male
+                        <input type="radio" name="gender" class="form-control">
+                    </label>
+                    <label>
+                        Female
+                        <input type="radio" name="gender" class="form-control">
+                    </label>
+                </div>
+
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-primary">submit</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+{
+  "name": "JWT-exercise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "alex",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.3.0"
+  }
+}

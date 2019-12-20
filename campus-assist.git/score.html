@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>成绩查询</title>
+    <!-- build:css css/score.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/angular-csp.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <!-- /build -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?cc4861cdc299c962fdfc7ef9c87c007a";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body id="chengji" data-ng-controller="score-controller">
+<div id="header">
+    <div class="_in">
+        <img id="header_logo" src="images/logo.png"/>
+        <button class="logout" ng-click="logout()">登出</button>
+    </div>
+</div>
+<div class="main">
+    <div class="main_in">
+        <!-- Score START -->
+        <h3>成绩单</h3>
+        <select ng-options="item.value as item.label for item in semesterList" ng-model="selectedSemester"></select>
+        <table>
+            <tr>
+                <th>课程名称</th>
+                <th>分数</th>
+                <th>学分</th>
+                <th>课程序号</th>
+            </tr>
+            <tr class="ng-cloak" data-ng-repeat="score in scores">
+                <td>{{score.courseName}}</td>
+                <td ng-class="{'not-passed': !score.passed}">{{score.score}}</td>
+                <td>{{score.courseCredit}}</td>
+                <td>{{score.courseId}}</td>
+            </tr>
+            <tr class="ng-cloak" data-ng-if="scores && scores.length == 0 && !isLoading">
+                <td colspan="4">木有找到任何数据哟~</td>
+            </tr>
+            <tr class="ng-cloak" data-ng-if="isLoading">
+                <td colspan="4" class="loading">Loading ...</td>
+            </tr>
+        </table>
+        <!-- Score END -->
+        <!-- Modal START -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">请登录教务中心</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="请输入学号" ng-model="modalUser">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="请输入密码（默认为身份证后6位）"
+                                       ng-model="modalPass" ng-keyup="$event.keyCode == 13 ? modalLogin() : null">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="tip" ng-bind="modalTip"></div>
+                        <button type="button" class="btn btn-primary" ng-click="modalLogin()">登录</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal END -->
+    </div>
+</div>
+<div id="footer">
+    <div class="_in">
+        <p>Powered by Kumia<br/><a target="_blank" href="http://sunanyway.com/?p=901">Contact me ></a></p>
+    </div>
+</div>
+<!-- build:js js/score.min.js -->
+<script data-main="js/app/score/main.js" src="js/lib/require.js"></script>
+<!-- /build -->
+</body>
+</html>

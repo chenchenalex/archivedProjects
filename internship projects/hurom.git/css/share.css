@@ -1,0 +1,159 @@
+.background {
+    position: absolute;
+    width: 100%;
+    min-height: 500px;
+}
+
+.fruit-juice {
+    position: absolute;
+    width: 90%;
+    bottom: 0;
+    margin-left: 5%;
+    top: 50%;
+    margin-top: 50px;
+}
+
+.fruit-juice img {
+    width: 100%;
+}
+
+.share-page.share-him {
+    position: absolute;
+    /* bottom: 100px; */
+    width: 115px;
+    left: 50%;
+    margin-left: 30px;
+    top: 50%;
+    margin-top: 100px;
+}
+
+.share-page.content {
+    position: absolute;
+    width: 290px;
+    left: 50%;
+    top: 50%;
+    /* height: 45%; */
+    margin-left: -145px;
+    margin-top: -235px;
+}
+
+.share-page.content .text-frame {
+    width: 100%;
+
+    height: 319px;
+    position: absolute;
+}
+
+.share-page.content .share-icon {
+    text-align: center;
+}
+
+.share-page.content .share-icon img {
+    width: 40%;
+    padding: 3% 0;
+}
+
+.share-page.content .greeting-words {
+    padding: 20px;
+    position: absolute;
+    /* background-color: pink; */
+    width: 250px;
+    height: 222px;
+}
+
+.share-page.content .greeting-words .from {
+    text-align: right;
+}
+
+.share-page.content .greeting-words .to {
+    line-height: 30px;
+    margin-top: 63px;
+}
+
+.share-page.content .love-image {
+    width: 84%;
+    text-align: center;
+    padding: 0 8%;
+}
+
+.share-page.content .love-image img {
+    width: 100%;
+    height: 126px;
+}
+
+.share-page.content .greeting-words .body .text {
+    position: relative;
+    width: 205px;
+    text-align: center;
+    margin: 0 23px;
+}
+
+.share-page.content .greeting-words .body .text textarea {
+    width: 100%;
+    border: 0;
+    padding: 0;
+    margin-top: -2px;
+}
+
+textarea.transparent, input.transparent {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    outline: none;
+}
+
+.text-editor-to {
+    padding-left: 5%;
+}
+
+.text-editor-from {
+    text-align: right;
+    padding-right: 5%;
+}
+
+input, textarea {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+input {
+    font-weight: bold;
+}
+
+#left-arrow {
+    position: absolute;
+    width: 18px;
+    height: 40px;
+    left: 50%;
+    top: 127px;
+    margin-left: -130px;
+}
+
+#right-arrow {
+    position: absolute;
+    width: 18px;
+    height: 40px;
+    right: 50%;
+    top: 127px;
+    margin-right: -130px;
+}
+
+#share-hint-cover {
+    width: 85%;
+    position: fixed;
+    right: 0;
+    padding: 5%;
+}
+
+#shade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.shade-cover {
+    position: absolute;
+    background-color: black;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+}

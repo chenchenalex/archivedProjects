@@ -1,0 +1,15 @@
+{
+  "name": "campus",
+  "version": "1.0.0",
+  "description": "Campus Assistance",
+  "homepage": "http://campus.kumia.com.cn",
+  "author": "Wang Jingfei",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-cssmin": "~0.12.2",
+    "grunt-contrib-requirejs": "~0.4.4",
+    "grunt-contrib-htmlmin": "~0.4.0",
+    "grunt-processhtml": "~0.3.7",
+    "grunt-uncss": "~0.4.2"
+  }
+}

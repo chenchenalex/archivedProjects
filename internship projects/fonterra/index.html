@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" manifest="index.mf">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingredients Selection Tree</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- build:css css/style.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- /build -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?38e6ab752780049ff203d784841053df";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+
+<div data-ng-controller="indexController">
+    <!-- Header -->
+    <header>
+        <h1 id="selection-tree">Ingredients Selection Tree</h1>
+        <img class="logo" src="img/common/logo.svg">
+    </header>
+
+    <!-- Start -->
+    <img class="trapezoid" id="trapezoid-1" src="img/index/trapezoid-1.png">
+
+    <div id="inputGroup" class="animated">
+
+        <div id="account" class="inputBlock">
+            <img src="img/index/account.png">
+            <input ng-model="account.name" type="text" placeholder="Account Name">
+        </div>
+        <div id="name" class="inputBlock">
+            <img src="img/index/name.png">
+            <input ng-model="user.name" type="text" placeholder="Customer Name">
+        </div>
+        <div id="account-responsible" class="inputBlock">
+            <img src="img/index/account-responsible.png">
+            <input ng-model="user.account" type="text" placeholder="Account Responsible">
+        </div>
+        <div id="tech" class="inputBlock">
+            <img src="img/index/technical.png">
+            <input ng-model="user.tech" type="text" placeholder="Technical Responsible">
+        </div>
+        <div id="date" class="inputBlock">
+            <img src="img/index/date.png">
+            <input ng-model="user.dateStr" type="text" readonly>
+        </div>
+        <a class="go" data-ng-click="submit()"></a>
+    </div>
+
+    <!-- After clicking "Go" -->
+    <div id="hugeBlock" style="left: -45%;"></div>
+</div>
+
+<!-- build:js js/index.min.js -->
+<script data-main="js/app/index/main.js" src="js/lib/require.js"></script>
+<!-- /build -->
+</body>
+</html>

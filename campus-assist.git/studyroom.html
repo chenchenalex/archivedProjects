@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>自习室查询</title>
+    <!-- build:css css/studyroom.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/angular-csp.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <!-- /build -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script"); 
+            hm.src = "//hm.baidu.com/hm.js?cc4861cdc299c962fdfc7ef9c87c007a";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body id="studyroom" data-ng-controller="studyroom-controller">
+    <div id="header">
+        <div class="_in">
+            <img id="header_logo" src="images/logo.png"/>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_in">
+            <!-- Studyroom START -->
+            <h3>自习室查询</h3>
+            <a class="report-bug" href="http://wx.wsq.qq.com/220088238">报错 ></a>
+            <div class="time-selector row" style="margin-bottom: 20px;">
+                <div class="col-xs-4">
+                    <select data-ng-model="week" class="form-control">
+                        <option value="1">第一周</option>
+                        <option value="2">第二周</option>
+                        <option value="3">第三周</option>
+                        <option value="4">第四周</option>
+                        <option value="5">第五周</option>
+                        <option value="6">第六周</option>
+                        <option value="7">第七周</option>
+                        <option value="8">第八周</option>
+                        <option value="9">第九周</option>
+                        <option value="10">第十周</option>
+                        <option value="11">第十一周</option>
+                        <option value="12">第十二周</option>
+                        <option value="13">第十三周</option>
+                        <option value="14">第十四周</option>
+                        <option value="15">第十五周</option>
+                        <option value="16">第十六周</option>
+                        <option value="17">第十七周</option>
+                        <option value="18">第十八周</option>
+                    </select>
+                </div>
+                <div class="col-xs-4 row">
+                    <select data-ng-model="day" class="form-control col-xs-4">
+                        <option value="1">星期一</option>
+                        <option value="2">星期二</option>
+                        <option value="3">星期三</option>
+                        <option value="4">星期四</option>
+                        <option value="5">星期五</option>
+                        <option value="6">星期六</option>
+                        <option value="7">星期日</option>
+                    </select>
+                </div>
+                <div class="col-xs-4">
+                    <select data-ng-model="time" class="form-control col-xs-4">
+                        <option value="1">第一节</option>
+                        <option value="2">第二节</option>
+                        <option value="3">第三节</option>
+                        <option value="4">第四节</option>
+                        <option value="5">第五节</option>
+                        <option value="6">第六节</option>
+                        <option value="7">第七节</option>
+                        <option value="8">第八节</option>
+                        <option value="9">第九节</option>
+                        <option value="10">第十节</option>
+                        <option value="11">第十一节</option>
+                        <option value="12">第十二节</option>
+                    </select>
+                </div>
+            </div>
+            <div class="loading" ng-if="isLoading">数据库好大，正在拼命查询哦 ...</div>
+            <div class="building ng-cloak" ng-repeat="building in buildings">
+                <div class="building-name">
+                    {{building.name}}楼
+                </div>
+                <div class="rooms-block">
+                    <div class="room" ng-repeat="room in building.rooms">
+                        {{room}}
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <!-- Studyroom END -->
+        </div>
+    </div>
+    <div id="footer">
+        <div class="_in">
+            <p>Powered by Kumia<br/><a target="_blank" href="http://sunanyway.com/?p=901">Contact me &gt;</a></p>
+        </div>
+    </div>
+<!-- build:js js/studyroom.min.js -->
+<script data-main="js/app/studyroom/main.js" src="js/lib/require.js"></script>
+<!-- /build -->
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingredients Selection Tree</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- build:css css/style.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- /build -->
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?38e6ab752780049ff203d784841053df";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body>
+
+<div data-ng-controller="indexController" data-ng-init="init()" class="type-selector-container">
+    <!-- Header -->
+    <header>
+        <h1>Ingredients Selection Tree</h1>
+
+        <div id="pleaseChoose">Please choose one type:</div>
+        <img class="logo" src="img/common/logo.svg">
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <a href="selection.html"><img class="arrow-back" src="img/index/arrow1.png"></a>
+    </footer>
+
+    <h1>Selection Tree</h1>
+    <img class="trapezoid" id="trapezoid-1" src="img/index/trapezoid-1.png" style="left: 43%; z-index: 0;">
+
+    <div id="hugeBlock" style="left: 0px;"></div>
+    <!-- After Selection  -->
+    <div class="leftPanel">
+        <div class="type-group-list">
+            <div class="typeGroup type-group-1">
+                <a href="#" ng-click="openDialogue(1)">
+                    <img id="type-1" class="type"
+                         src="img/index/type-1.png">
+                </a>
+                <a href="#" ng-click="openDialogue(2)">
+                    <img id="type-2" ng-mouseover="showType2 = true;" ng-mouseleave="showType2 = false;" class="type"
+                         src="img/index/type-2.png">
+                </a>
+                <a href="#" ng-click="openDialogue(3)">
+                    <img id="type-3" ng-mouseover="showType3 = true;" ng-mouseleave="showType3 = false;" class="type"
+                         src="img/index/type-3.png">
+                </a>
+                <a href="#" ng-click="openDialogue(4)">
+                    <img id="type-4" ng-mouseover="showType4 = true;" ng-mouseleave="showType4 = false;" class="type"
+                         src="img/index/type-4.png">
+                </a>
+            </div>
+            <div class="typeGroup type-group-2">
+                <a href="files/NZMP-protein-portfolio-matrix.pdf" target="_blank">
+                    <img class="type" src="img/index/type-5.png">
+                </a>
+                <img class="type disabled" src="img/index/type-6.png">
+                <img class="type disabled" src="img/index/type-7.png">
+            </div>
+        </div>
+
+        <div class="definition-list ng-cloak">
+            <div class="definition" id="definition-1">
+                <h5 class="definition-header">Pot Set Yoghurt</h5>
+
+                <p>
+                    Milk is prepared and treated as for stirred yoghurt manufacture until the point of fermentation. 
+                    The inoculated milk is well mixed then used to fill retail containers and fermented in the
+                    individual pottles.
+                    Once the fermentation is complete the yoghurt pottles are cooled and ready for distribution.
+                    (Protein range: 3-4 %)
+                </p>
+            </div>
+            <div class="definition" id="definition-2">
+                <h5 class="definition-header">Stirred or smoothed yoghurt</h5>
+
+                <p>
+                    Stirred or smoothed yoghurt is yoghurt that is fermented in a bulk
+                    tank prior to being stirred or smoothed using specific equipment such
+                    as a back pressure valve or high shear device.  Lower solids products may be sufficiently smoothed
+                    by
+                    agitation (i.e. stirring) in the tank and/or pumping i.e. transfer to the filling lines.  The
+                    smoothing/stirring
+                    action gives the yoghurt a homogeneous, flowable consistency.  After stirring/smoothing the yoghurt
+                    may be combined
+                    with fruit (optional) then filled into the final retail pots. (Protein range: 3-5 %)
+                </p>
+            </div>
+            <div class="definition" id="definition-3">
+                <h5 class="definition-header">Pot Set Yoghurt</h5>
+
+                <p>
+                    Concentrated or higher protein spoonable cultured products such as Greek (style) yoghurt, Petit
+                    Suisse, Fromage Frais
+                    and Quark were manufactured traditionally by using a whey separation (‘strained’) process that
+                    concentrates the solids
+                    after fermentation.  Today, manufacturers are able to make these types of products using a direct
+                    set quick process with
+                    the aid of Fonterra MPC ingredients.
+                    Petit Suisse, Fromage Frais and Quark are similar types of products and can be described as soft,
+                    cultured, un-ripened
+                    fresh cheese made using a mesophillic culture, and sometimes rennet.  The texture is thick, smooth
+                    and creamy and the
+                    product is typically eaten as a dessert or snack.  These products come with varying fat and protein
+                    contents and are sold
+                    plain, or sweetened and fruited, or as savoury versions with salt or herbs.
+                    The direct set quick process increases the milk solids at the start of the process (i.e. during
+                    recombining), rather than
+                    concentrating after fermentation.  This means that existing yoghurt manufacturing equipment can
+                    generally be used, eliminating
+                    the need for major capital investment and avoiding the acid whey waste stream that is generated
+                    during the traditional
+                    strained process.  Cream and sugar can be added to the milk before culturing as the target
+                    composition will be maintained
+                    by eliminating the separation (dewheying) process step. (Protein range: 5-10 %)
+                </p>
+            </div>
+            <div class="definition" id="definition-4">
+                <h5 class="definition-header">Pot Set Yoghurt</h5>
+
+                <p>
+                    Drinking yoghurts are normally a blend of yoghurt, sugar and fruit juice or fruit flavour/pulp.  The
+                    concentration of milk
+                    solids and protein may be various. The fermented yoghurt curd needs to be processed through high
+                    shear to make the yogurt
+                    product pourable and drinkable. The protein may need to be stabilised by stabilizers to prevent
+                    sedimentation. (Protein range: 1-8 %)
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div style="display:none" id="dialogueGroup">
+
+        <div style="display:none" class="dialogue" id="dialogue-1">
+            <h2>Do you have an idea on customer's preference in pot set yoghurt?</h2>
+
+            <a href="questionaire.html#/type/set" id="option-1" class="option">Yes, I do.</a>
+            <a href="formulation-pot-set.html" id="option-2" class="option">No, I don't.</a>
+
+        </div>
+        <div style="display:none" class="dialogue" id="dialogue-2">
+            <h2>Do you have an idea on customer's preference in stirred/smoothed yoghurt?</h2>
+
+            <a href="questionaire.html#/type/stirred" id="option-1" class="option">Yes, I do.</a>
+            <a href="formulation-stirred.html" id="option-2" class="option">No, I don't.</a>
+
+        </div>
+        <div style="display:none" class="dialogue" id="dialogue-3">
+            <h2>Do you have an idea on customer's preference in high protein/Greek style yoghurt?</h2>
+
+            <a href="questionaire.html#/type/high-protein" id="option-1" class="option">Yes, I do.</a>
+            <a href="formulation-high-protein.html" id="option-2" class="option">No, I don't.</a>
+
+        </div>
+        <div style="display:none" class="dialogue" id="dialogue-4">
+            <h2>Do you have an idea on customer's preference in drinking yoghurt?</h2>
+
+            <a href="questionaire.html#/type/drinking" id="option-1" class="option">Yes, I do.</a>
+            <a href="formulation-drinking.html" id="option-2" class="option">No, I don't.</a>
+
+        </div>
+        <div id="closeDialogue" ng-click="closeDialogue()"></div>
+    </div>
+</div>
+<div id="fullscreen"></div>
+<!-- build:js js/index.min.js -->
+<script data-main="js/app/index/main.js" src="js/lib/require.js"></script>
+<!-- /build -->
+</body>
+</html>

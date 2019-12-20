@@ -1,0 +1,14 @@
+{
+  "name": "fonterra",
+  "version": "1.0.0",
+  "description": "Fonterra",
+  "homepage": "http://fonterra.kumia.com.cn",
+  "author": "Wang Jingfei",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-cssmin": "~0.12.2",
+    "grunt-contrib-requirejs": "~0.4.4",
+    "grunt-contrib-htmlmin": "~0.4.0",
+    "grunt-processhtml": "~0.3.7"
+  }
+}

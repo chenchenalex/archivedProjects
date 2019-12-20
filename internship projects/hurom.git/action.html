@@ -1,0 +1,44 @@
+<img class="background" src="image/action/background.png" style="min-height: initial;">
+<div class="femina-icon">
+    <img src="image/action/logo.png">
+</div>
+
+<div class="static-bottom">
+    <img id="action-message-1" class="message action-step-1" src="image/action/message-1.gif" style="display:none;">
+    <img id="action-message-2" class="message action-step-3" src="image/action/message-2.gif" style="display:none;">
+    <img id="drag-hint-1" class="drag-hint" src="image/action/push.gif" style="display:none;">
+    <img id="drag-hint-2" class="drag-hint" src="image/action/push-hint.png" style="display:none;">
+    <img id="drag-hint-3" class="drag-hint" src="image/action/drag.gif" style="display:none;">
+    <img id="drag-hint-4" class="drag-hint" src="image/action/drag-hint.gif" style="display:none;">
+</div>
+
+<div class="show-on-step-1 show-on-step">
+    <div class="static-bottom">
+        <div id="fruit-container">
+            <div class="fruit">
+                <img id="fruit-1" style="opacity:0;margin-left: -100%;">
+            </div>
+            <div class="fruit">
+                <img id="fruit-2" style="opacity:0;margin-left: -100%;">
+            </div>
+            <div class="fruit">
+                <img id="fruit-3" style="opacity:0;margin-left: -100%;">
+            </div>
+            <div class="change-fruit-container">
+                <img id="change-fruit" src="image/action/change-fruit.png" ng-click="changeFruit()" style="display:none;">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="finish-step" class="show-on-step-3 show-on-step" style="display: none;">
+    <img class="finish finish-text" src="image/action/complete.png">
+    <img id="finish-button" class="spinner finish finish-cycle" ng-click="finishAction()" src="image/action/cycle.png">
+</div>
+
+<div id="zhazhiji">
+    <div class="droppable-zone"></div>
+    <img class="component" src="image/action/hurom.png">
+    <img id="juice-component" class="component" style="bottom: -12%;">
+    <img class="component" src="image/action/cup.png">
+</div>
